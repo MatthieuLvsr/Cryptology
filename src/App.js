@@ -2,12 +2,14 @@ import React from 'react'
 import './App.css';
 import CryptoJS from 'crypto-js'
 import { keccak512 } from 'js-sha3';
+import logo from './lock.png'
 // import NodeRSA from 'node-rsa';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Cryptology
         </p>
@@ -57,10 +59,10 @@ class HashForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='form' onSubmit={this.handleSubmit}>
       <label>
         Choose you hashing method:
-        <select name='method' value={this.state.method} onChange={this.handleChange}>
+        <select className='form-elm' name='method' value={this.state.method} onChange={this.handleChange}>
           <option value="MD5">MD5</option>
           <option value="SHA256">SHA256</option>
           <option value="Keccak-512">Keccak-512</option>
@@ -69,7 +71,7 @@ class HashForm extends React.Component {
       </label>
         <label>
           Entry:
-          <textarea name='entry' value={this.state.entry} onChange={this.handleChange} />
+          <textarea className='form-elm' name='entry' value={this.state.entry} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Hash!" />
       </form>

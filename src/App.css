@@ -24,6 +24,25 @@
   color: white;
 }
 
+.App .form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: red; */
+  height: 300px;
+}
+
+.form label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.form .form-elm{
+  margin: 15px;
+}
+
 .App-link {
   color: #61dafb;
 }
